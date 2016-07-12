@@ -35,7 +35,6 @@ def preprocess(document):
 	# Identify POS tags
 	tags = [pos_tag(word) for word in words]
 
-
 	for tag in tags:
 		for i in range(0,len(tag)-1):
 			# Remove any instances of 'and' which is identified by 'CC' pos
