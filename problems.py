@@ -4,7 +4,6 @@ import rules as ru
 import data
 
 def solve(text):
-
 	"""
 	Answers a word problem.
 

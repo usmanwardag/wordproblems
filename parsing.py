@@ -6,7 +6,6 @@ import string
 environment = {}
 
 def preprocess(document):
-
 	"""
 	Splits text into sentences and identify POS tags. Additionally, 
 	performs a few corrections including 'and' removal and pronoun
@@ -99,7 +98,6 @@ def compare(sentence, grammar):
 	return matches
 
 def check_match(sub_tree, rule):
-
 	"""
 	Apply the matches to get meaning out of sentences.
 
