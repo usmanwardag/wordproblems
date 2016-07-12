@@ -38,7 +38,6 @@ def preprocess(document):
 
 	for tag in tags:
 		for i in range(0,len(tag)-1):
-
 			# Remove any instances of 'and' which is identified by 'CC' pos
 			if tag[i][1] == 'CC':
 
@@ -46,7 +45,6 @@ def preprocess(document):
 				# TODO: Make logic for other types of nouns as well.
 				if tag[i-1][1] == 'NNP' and tag[i+1][1] == 'NNP':
 					tag.remove(tag[i])
-
 				# Else 'and' is between two sentences, in which case split
 				else:
 					index = tags.index(tag)
@@ -83,7 +81,6 @@ def compare(sentence, grammar):
 	# Apply grammar rule
 	cp = RegexpParser(grammar)
 	chunk = cp.parse(sentence)
-	
 	# Identify label of the rule
 	label = grammar.split(':')[0]
 
@@ -133,13 +130,10 @@ def check_match(sub_tree, rule):
 		for a,b in match:
 			if b in rule[1]:
 				sub = a
-
 			elif b in rule[3]:
 				op_ele = a
-
 			elif b in rule[4]:
 				p_obj = a
-
 			elif b in rule[5]:
 				s_obj = a
 

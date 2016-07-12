@@ -32,10 +32,8 @@ def solve(text):
 		index = -1
 		
 		for g in grammar:
-		
 			matches = compare(tag, g)
 			index += 1
-			
 			# If a match is found, exit
 			if matches[0] is not 'None':
 				break
@@ -49,8 +47,4 @@ def solve(text):
 		print environment
 
 	# TODO: Understand question and extract information from environment.
-
-if __name__ == "__main__":
-	text = data.level0()
-	solve(text)
-
+	
